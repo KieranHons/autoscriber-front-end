@@ -12,10 +12,7 @@
     <button @click="getSymptoms">Submit</button>
   </div>
 </template>
-/*BACK ipsum dolor sit amet, BACK ache adipiscing elit. Suspendisse dignissim leo massa, sed aliquet leo posuere ut.
- *Curabitur malesuada accumsan erat, id varius eros tincidunt quis.
-*Vivamus lobortis, odio at fermentum efficitur, risus est tincidunt nisl, eget condimentum tellus dui vitae nibh.
-*/
+
 <script>
 import HighlightableInput from "vue-highlightable-input";
 import axios from "axios";
@@ -34,14 +31,14 @@ export default {
   data() {
     return {
       msg: "",
-      defaultStyle: { 'background-color' : 'yellow' },
+      defaultStyle: {'background-color': 'yellow'},
       symptoms: this.SymptomModel,
       highlights: [""],
       highlightEnabled: true
     }
   },
   methods: {
-    async getSymptoms () {
+    async getSymptoms() {
       axios
           .get("http://localhost:3000")
           .then(response => {
@@ -59,6 +56,7 @@ export default {
       })
     }
   }
+}
 </script>
 
 <style>
